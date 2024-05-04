@@ -62,6 +62,7 @@ class Mastermind
     @guess_history << [guess, feedback]
   end
 
+  # Game over message when attempts run out
   def end_game_message
     if @guess_history.last[0] == @secret_code
       puts "Congratulations! You guessed the secret code."
@@ -71,4 +72,5 @@ class Mastermind
   end
 end
 
-Mastermind.new.play
+game = Mastermind.new
+game.play
